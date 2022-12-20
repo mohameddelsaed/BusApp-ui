@@ -14,21 +14,22 @@ class ScreenOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-        backgroundColor:  Color(0xffFFFFFD),
+        backgroundColor:  const Color(0xffFFFFFD),
           appBar: appbar(
             title: 'جميع الباصات',
           ),
-          body: Column(
-            children: [
-              Row(
-                children: [
-                  CustomTextField(hintText: 'البحث عن باص',),
-                  Icon(Icons.add_chart_outlined,color:Color(0xff7771D1),size: 40,),
-                ],
-              ),
-              SizedBox(height: 50,),
-              Tablee(),
-            ],
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    CustomTextField(hintText: 'البحث عن باص',),
+                    const Icon(Icons.add_chart_outlined,color:Color(0xff7771D1),size: 40,),
+                  ],
+                ),
+                const Tablee(),
+              ],
+            ),
           ),
         ),
     );
