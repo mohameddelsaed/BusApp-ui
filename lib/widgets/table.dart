@@ -93,7 +93,7 @@ class Tablee extends StatelessWidget {
                   child: Text(e),
                 ),
               )
-            : index == 2
+            : index == cell!.length - 1
                 ? SizedBox(
                     height: 59,
                     child: Icon(
